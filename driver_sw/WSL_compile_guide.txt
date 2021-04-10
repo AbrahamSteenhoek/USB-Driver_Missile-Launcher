@@ -1,0 +1,12 @@
+1. Get WSL set up on your machine :https://docs.microsoft.com/en-us/windows/wsl/install-win10
+2. download the following cross compiler: https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz
+3. Untar this folder in some known location (on your local machine)
+    - I have mine inside of this project folder, but you can put it wherever you want, as long as you know the filepath to get to the folder
+4. In your ~/.bashrc file in WSL, add the following line at the bottom
+    - export CROSS_COMPILE=<path-to-cross-compiler-folder>/bin/arm-none-linux-gnueabihf-
+5. In the Makefile you're using, add this line underneath the line that specifies "SOURCES"
+    - export ARCH=arm
+    - If you're pulling from the git repo, this change should already be made
+6. Navigate to your drivers/ directory and try to build the driver
+    - If you're having trouble, check that the linux kernel you have is built correctly
+    - The linux.tar file is a fully built linux kernel that I copied from the remote machine. If your linux build doesn't work, then try to use the .tar

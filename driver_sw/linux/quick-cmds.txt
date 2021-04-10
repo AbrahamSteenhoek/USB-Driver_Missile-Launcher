@@ -1,0 +1,8 @@
+source /remote/Xilinx/2018.3/SDK/2018.3/settings64.sh
+export CROSS_COMPILE=arm-linux-gnueabihf-
+export ARCH=arm
+cd dtc/ ; export PATH=`pwd`:$PATH
+cd u-boot-xlnx/tools ; export PATH=`pwd`:$PATH
+export CPATH=:/home/phjones/cpre488/Spring-2019/MP-3/include-hack/
+export LIBRARY_PATH=:/home/phjones/cpre488/Spring-2019/MP-3/lib-hack/
+export LD_LIBRARY_PATH=:/home/phjones/cpre488/Spring-2019/MP-3/lib-hack/
