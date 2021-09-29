@@ -9,7 +9,11 @@ This project uses the Xilinx Zedboard as the linux host running the driver code 
 
 ## File Descriptions
 All relevant software files are contained in ```driver_sw/drivers```
+
 ```launcher_driver.c``` - kernel code defining the USB driver
+
 ```launcher_fire_buttons.{c,h}``` - control the missile launcher using the pushbuttons on the Xilinx Zedboard
+
 ```launcher_fire_keyboard.{c,c}``` - control the missile launcher using keyboard input through stdin
+
 ```setup_zynq.sh``` - helper script to properly set up usb driver once linux boots up
